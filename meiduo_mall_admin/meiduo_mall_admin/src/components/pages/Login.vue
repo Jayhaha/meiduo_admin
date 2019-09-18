@@ -31,7 +31,7 @@ export default {
           this.errmsg = '用户名或密码不能为空';
           this.errshow = true;
           return;
-       };
+       }
        this.axios.post(cons.apis + '/authorizations/',
         {
           username:this.username,

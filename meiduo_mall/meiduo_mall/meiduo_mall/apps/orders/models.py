@@ -13,8 +13,9 @@ class OrderInfo(BaseModel):
     total_amount = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="商品总金额")
     freight = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="运费")
     pay_method = models.SmallIntegerField(default=1, verbose_name="支付方式")
-    # 1-待发货，2-待支付，3-待收货，4-待评价，5-完成
+    # 1-待发货，2-待支付，3-待收货，4-待评价，5-完成,6-已取消
     status = models.SmallIntegerField(default=1, verbose_name="订单状态")
+
 
     class Meta:
         db_table = "tb_order_info"

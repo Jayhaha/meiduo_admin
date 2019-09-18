@@ -9,7 +9,8 @@ class User(AbstractUser):
     email_active = models.BooleanField(default=False)
     # 默认收货地址
     default_address = models.ForeignKey('users.Address', null=True, related_name='users')
-
+    def __str__(self):
+        return self.username
 
 class Address(BaseModel):
     # 关联用户
